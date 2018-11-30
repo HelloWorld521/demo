@@ -13,8 +13,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
-    public Result<String> hello(@RequestParam String name) {
-        Result success = ResultUtil.success("Hello " + name);
-        return success;
+    public Result hello(@RequestParam String name) {
+        return ResultUtil.success("Hello " + name);
     }
 }
